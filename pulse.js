@@ -211,7 +211,7 @@ window.onresize = resize;
 resize();
 animate();
 
-for (let i=0; i<20; i++) {
+for (let i=0; i<30; i++) {
   setTimeout(function() {
     var object = new Object(Math.random() * canvas.width, Math.random() * canvas.height, Math.random());
     object.colRadius = (10 + Math.random() * 150) * scaleFactor;
