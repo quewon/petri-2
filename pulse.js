@@ -11,7 +11,7 @@ function resize() {
 }
 
 function animate() {
-  context.fillStyle = "rgba(240, 219, 144, .2)";
+  context.fillStyle = "rgba(240, 219, 144, .5)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   update();
@@ -119,7 +119,7 @@ class Object {
         this.connections.push({
           x1: this.x, y1: this.y,
           x2: object.x, y2: object.y,
-          color: "rgba("+r+", "+g+", "+b+", .15)"
+          color: "rgba("+r+", "+g+", "+b+", .3)"
         });
       }
     }
@@ -167,14 +167,14 @@ class Object {
   }
 
   draw() {
-    context.strokeStyle = "rgba(0, 0, 0, .02)";
+    context.strokeStyle = "rgba(0, 0, 0, .04)";
     context.beginPath();
     context.arc(this.x, this.y, this.colRadius, 0, Math.PI*2);
     if (this.attraction > 0) {
       context.stroke();
     } else {
       context.stroke();
-      context.fillStyle = "rgba(200, 70, 20, .015)";
+      context.fillStyle = "rgba(200, 70, 20, .03)";
       context.fill();
     }
 
@@ -186,7 +186,7 @@ class Object {
       context.stroke();
     }
     if (this.connections.length == 0 && this.attraction >= 0) {
-      context.strokeStyle = "rgba(0, 0, 0, .15)";
+      context.strokeStyle = "rgba(0, 0, 0, .3)";
     }
 
     this.time++;
@@ -198,7 +198,7 @@ class Object {
     let x = this.x + this.xo;
     let y = this.y + this.yo;
 
-    if (this.attraction < 0) context.strokeStyle = "rgb(255, 50, 50, .15)";
+    if (this.attraction < 0) context.strokeStyle = "rgb(255, 50, 50, .3)";
     context.beginPath();
     context.arc(x, y, this.radius, 0, Math.PI*2);
     context.stroke();
