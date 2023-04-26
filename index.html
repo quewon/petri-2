@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>dancers on the field</title>
+    <style media="screen">
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: monospace;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+        cursor: none;
+      }
+
+      #tooltip {
+        position: absolute;
+        transform: translate(.5rem, .5rem);
+        opacity: .5;
+      }
+
+      .gone {
+        display: none;
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+
+    <canvas></canvas>
+
+    <div id="tooltip" class="gone"></div>
+
+    <div class="centered">
+
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="lib/howler.core.js"></script>
+  <script type="text/javascript" src="sound.js"></script>
+  <script type="text/javascript" src="pulse.js"></script>
+</html>
